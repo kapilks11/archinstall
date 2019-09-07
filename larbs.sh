@@ -180,6 +180,10 @@ adduserandpass || error "Error adding username and/or password."
 refreshkeys || error "Error automatically refreshing Arch keyring. Consider doing so manually."
 
 dialog --title "LARBS Installation" --infobox "Installing \`basedevel\` and \`git\` for installing other software." 5 70
+
+
+
+
 pacman --noconfirm --needed -S base-devel git >/dev/null 2>&1
 [ -f /etc/sudoers.pacnew ] && cp /etc/sudoers.pacnew /etc/sudoers # Just in case
 
@@ -218,6 +222,28 @@ serviceinit NetworkManager cronie
 # Most important command! Get rid of the beep!
 systembeepoff
 
+#make user folders
+mkdir "/home/$name/Downloads"
+mkdir "/home/$name/Documents"
+mkdir "/home/$name/Documents/books"
+mkdir "/home/$name/Documents/bills"
+mkdir "/home/$name/Musics"
+mkdir "/home/$name/Videos"
+mkdir "/home/$name/Pictures"
+mkdir "/home/$name/Data"
+mkdir "/home/$name/work"
+mkdir "/home/$name/temp"
+mkdir "/home/$name/.software"
+mkdir "/home/$name/.software/vbox"
+
+sudo mkdir -p /media/usb
+sudo mkdir -p /media/usb1
+sudo mkdir -p /media/usb2
+sudo mkdir -p /mnt/WIN_C
+sudo mkdir -p /mnt/WIN_D
+sudo chown $name /mnt
+sudo chown $name /media
+
 # Configure Grub again for detecting windows installation
 # kept here so that ntfs-3g and os-prober installed
 sudo grub-mkconfig -o /boot/grub/grub.cfg
@@ -226,7 +252,8 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 # serveral important commands, `shutdown`, `reboot`, updating, etc. without a password.
 newperms "%wheel ALL=(ALL) ALL #LARBS
 %wheel ALL=(ALL) NOPASSWD: /usr/bin/shutdown,/usr/bin/reboot,/usr/bin/systemctl suspend,/usr/bin/wifi-menu,/usr/bin/mount,/usr/bin/umount,/usr/bin/pacman -Syu,/usr/bin/pacman -Syyu,/usr/bin/packer -Syu,/usr/bin/packer -Syyu,/usr/bin/systemctl restart NetworkManager,/usr/bin/rc-service NetworkManager restart,/usr/bin/pacman -Syyu --noconfirm,/usr/bin/loadkeys,/usr/bin/yay,/usr/bin/pacman -Syyuw --noconfirm"
-
+# update database for locate command
+updatedb
 # Last message! Install complete!
 finalize
 clear

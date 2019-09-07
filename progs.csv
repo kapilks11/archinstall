@@ -109,3 +109,7 @@ G,https://github.com/kapilks11/st.git,"is my custom build of suckless's terminal
 ,gnu-free-fonts,"fonts for git hub"
 ,os-prober,"MS windows prober"
 ,ntfs-3g,"ntfs driver for windows partition"
+,pcmanfm,"XFCE File Manager"
+,mlocate,"File Search Tools"
+,cups,"Printing service Linux"
+,intel-ucode,"Intel microcode update"
