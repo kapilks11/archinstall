@@ -15,8 +15,8 @@ while getopts ":a:r:b:p:h" o; do case "${o}" in
 esac done
 
 # DEFAULTS:
-[ -z "$dotfilesrepo" ] && dotfilesrepo="https://github.com/lukesmithxyz/voidrice.git" && repobranch="archi3"
-[ -z "$progsfile" ] && progsfile="https://raw.githubusercontent.com/LukeSmithxyz/LARBS/master/archi3/progs.csv"
+[ -z "$dotfilesrepo" ] && dotfilesrepo="https://github.com/kapilks11/archinstall.git" # && repobranch="archi3"
+[ -z "$progsfile" ] && progsfile="https://raw.githubusercontent.com/kapilks11/archinstall/master/progs.csv"
 [ -z "$aurhelper" ] && aurhelper="yay"
 [ -z "$repobranch" ] && repobranch="master"
 
@@ -25,7 +25,7 @@ esac done
 error() { clear; printf "ERROR:\\n%s\\n" "$1"; exit;}
 
 welcomemsg() { \
-	dialog --title "Welcome!" --msgbox "Welcome to Luke's Auto-Rice Bootstrapping Script!\\n\\nThis script will automatically install a fully-featured i3wm Arch Linux desktop, which I use as my main machine.\\n\\n-Luke" 10 60
+	dialog --title "Welcome!" --msgbox "Welcome to Kapil's Auto-Rice Bootstrapping Script!\\n\\nThis script will automatically install a fully-featured i3wm Arch Linux desktop borrowed from luke smith rice, which I use as my main machine.\\n\\n-Kapil" 10 60
 	}
 
 getuserandpass() { \
@@ -153,6 +153,9 @@ finalize(){ \
 ### THE ACTUAL SCRIPT ###
 
 ### This is how everything happens in an intuitive format and order.
+#First start network using dc
+dhcpcd
+
 
 # Check if user is root on Arch distro. Install dialog.
 pacman -Syu --noconfirm --needed dialog ||  error "Are you sure you're running this as the root user? Are you sure you're using an Arch-based distro? ;-) Are you sure you have an internet connection? Are you sure your Arch keyring is updated?"
@@ -214,6 +217,10 @@ serviceinit NetworkManager cronie
 
 # Most important command! Get rid of the beep!
 systembeepoff
+
+# Configure Grub again for detecting windows installation
+# kept here so that ntfs-3g and os-prober installed
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # This line, overwriting the `newperms` command above will allow the user to run
 # serveral important commands, `shutdown`, `reboot`, updating, etc. without a password.

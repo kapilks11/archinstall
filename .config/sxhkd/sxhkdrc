@@ -16,15 +16,16 @@ super + i
 super + y
 	$TERMINAL -e calcurse -D ~/.config/calcurse
 super + shift + a
-	$TERMINAL -e pulsemixer; pkill -RTMIN+10 i3blocks
+	pavucontrol
+#	$TERMINAL -e pulsemixer; pkill -RTMIN+10 i3blocks
 super + shift + c
 	camtoggle
 super + shift + e
 	tutorialvids
 super + w
-	webby | xargs -r $BROWSER
+	$BROWSER #webby | xargs -r $BROWSER
 super + shift + w
-	$BROWSER
+	chromium
 super + shift + g
 	gimp
 
@@ -37,6 +38,9 @@ super + Insert
 	showclip
 super + shift + x
 	prompt "Shutdown computer?" "sudo -A shutdown -h now"
+
+super + shift + v
+	surf
 super + shift + BackSpace
 	prompt "Reboot computer?" "sudo -A shutdown -r now"
 super + x
@@ -123,10 +127,11 @@ super + F5
 	sudo -A systemctl restart NetworkManager
 # Start torrent daemon/open interface
 super + F6
-	torwrap
+	intmonitor
 # toggle torrent daemon
 super + F7
-	td-toggle
+	extmonitor
+	#td-toggle
 # sync email
 super + F8
 	mailsync
