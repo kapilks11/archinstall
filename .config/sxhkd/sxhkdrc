@@ -21,7 +21,8 @@ super + shift + a
 super + shift + c
 	camtoggle
 super + shift + e
-	tutorialvids
+#	tutorialvids
+	pcmanfm
 super + w
 	$BROWSER #webby | xargs -r $BROWSER
 super + shift + w
@@ -114,7 +115,8 @@ super + {_,shift +} bracketleft
 # Function keys
 # Show readme
 super + F1
-	groff -mom $HOME/.local/share/larbs/readme.mom -Tpdf | zathura -
+#	groff -mom $HOME/.local/share/larbs/readme.mom -Tpdf | zathura -
+	bookmark
 # F2 is restart in i3 right now.
 # Change display
 super + F3
