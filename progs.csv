@@ -113,3 +113,5 @@ G,https://github.com/kapilks11/st.git,"is my custom build of suckless's terminal
 ,mlocate,"File Search Tools"
 ,cups,"Printing service Linux"
 ,intel-ucode,"Intel microcode update"
+,tor,"Support for tor network"
+,torsocks,"Support for torsockets for cmd line prog"

@@ -243,7 +243,7 @@ sudo mkdir -p /mnt/WIN_C
 sudo mkdir -p /mnt/WIN_D
 sudo chown $name /mnt
 sudo chown $name /media
-
+sudo chown -R $name:wheel /home/$name
 # Configure Grub again for detecting windows installation
 # kept here so that ntfs-3g and os-prober installed
 sudo grub-mkconfig -o /boot/grub/grub.cfg
