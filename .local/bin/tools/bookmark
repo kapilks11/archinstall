@@ -1,0 +1,4 @@
+# Get user choice including multi-monitor and manual selection:
+#chosen=$(printf "%swww.google.com\\nwww.ndtv.com \\nhttp://deal.drdo.in" | dmenu -i -l 5 -p "Select Address") &&
+chosen=$(cat ~/Data/internet/bookmark.list | dmenu -i -l 5 -p "Select Address") &&
+firefox $chosen

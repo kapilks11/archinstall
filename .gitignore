@@ -19,7 +19,6 @@
 .config/pavucontrol.ini
 .config/pcmanfm/
 .config/pulse/
-.config/shortcutrc
 .config/transmission/
 .config/vifm/scripts/
 .config/vifm/vifm-help.txt
@@ -27,7 +26,6 @@
 .config/vifm/vifmshortcuts
 .esd_auth
 .gitconfig
-.local/bin/tools/bookmark
 .local/share/mc/
 .local/share/newsboat/
 .local/share/nvim/
