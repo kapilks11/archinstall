@@ -115,3 +115,17 @@ G,https://github.com/kapilks11/st.git,"is my custom build of suckless's terminal
 ,intel-ucode,"Intel microcode update"
 ,tor,"Support for tor network"
 ,torsocks,"Support for torsockets for cmd line prog"
+,ntp,"NTP support in Computer"
+,ctags,"ctags support for vim"
+,keepassxc,"Keepass password manager"
+,aic94xx-firmware,"Firmware for archlinux"
+,openbox,"open box windows manager"
+,lightdm,"Graphical Login manager"
+,lightdm-gtk-greeter,"Greeter for lightdm"
+,obconf,"openbox config"
+,tint2,"open box pannel"
+,nitrogen,"wall paper setting for openbox"
+,geany,"GUI text editor"
+,xarchiver,"archiver for pcmanfm"
+
+

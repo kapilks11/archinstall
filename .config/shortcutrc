@@ -26,3 +26,4 @@ cfmc="$EDITOR ~/.config/ncmpcpp/config" \
 er="$EDITOR ~/Documents/referbib" \
 cfB="$EDITOR ~/.config/i3blocks/config" \
 cfk="$EDITOR ~/.config/sxhkd/sxhkdrc" \
+ldf="$EDITOR ~/Data/ledger/2019.csv" \

@@ -244,6 +244,8 @@ sudo mkdir -p /mnt/WIN_D
 sudo chown $name /mnt
 sudo chown $name /media
 sudo chown -R $name:wheel /home/$name
+systemctl enable ntpd
+systemctl enable lightdm.service
 # Configure Grub again for detecting windows installation
 # kept here so that ntfs-3g and os-prober installed
 sudo grub-mkconfig -o /boot/grub/grub.cfg

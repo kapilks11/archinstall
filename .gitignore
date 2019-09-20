@@ -42,4 +42,39 @@
 Data/
 Downloads/
 work/
+ .bakerc
+.config/GIMP/
+.config/caja/
+.config/calcurse/apts
+.config/calcurse/todo
+.config/calibre/
+.config/darktable/
+.config/geany/
+.config/keepassxc/
+.config/libreoffice/
+.config/msmtp/
+.config/mutt/
+.config/ncmpcpp/error.log
+.config/notmuch-config
+.config/qutebrowser/
+.config/vlc/
+.config/xarchiver/
+.config/youtube-viewer/
+.dmrc
+.gnupg/
+.local/share/Trash/
+.local/share/gvfs-metadata/
+.local/share/mail/
+.local/share/vifm/
+.local/share/vlc/
+.mbsyncrc
+.password-store/
+.w3m/
+.xsession-errors
+.xsession-errors.old
+Calibre Library/
+Documents/
+Music/
+Videos
+temp/
 
