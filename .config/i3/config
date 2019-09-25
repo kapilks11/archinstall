@@ -9,8 +9,8 @@
 
 # #---Basic Definitions---# #
 for_window [class="^.*"] border pixel 4
-gaps inner 15
-gaps outer 15
+gaps inner 0
+gaps outer 0
 set $term --no-startup-id $TERMINAL
 set $mod Mod4
 

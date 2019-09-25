@@ -88,10 +88,10 @@
         </menu>
         <menu id="4" label="Science">
             <item label="bc"> <action name="Execute">
-                <execute>xterm -e bc</execute>
+                <execute>st -e bc</execute>
             </action> </item>
             <item label="dc"> <action name="Execute">
-                <execute>xterm -e dc</execute>
+                <execute>st -e dc</execute>
             </action> </item>
         </menu>
        <menu id="37" label="System">
