@@ -3,3 +3,4 @@
 [ -f "$HOME/.xprofile" ] && . ~/.xprofile
 
 exec slstatus &
+exec dwm 

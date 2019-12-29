@@ -127,5 +127,15 @@ G,https://github.com/kapilks11/st.git,"is my custom build of suckless's terminal
 ,nitrogen,"wall paper setting for openbox"
 ,geany,"GUI text editor"
 ,xarchiver,"archiver for pcmanfm"
-
-
+,lightdm,"login Manager"
+,curlftpfs,"ftp mounting software"
+,gthumb,"Photo Viewer"
+,hunspell,"office dictionary"
+,hunspell-en_US,"office us dict"
+,hyphen-en,"office us dict"
+,mythes-en,"office us dict"
+,bleachbit,"disk cleaning software"
+A,xxd-standalone,"Hex dump utility"
+P,pynvim,"neovim python integration"
+,nodejs,"nodejs required for nvim completion plugin"
+,npm,"required for nodejs"
